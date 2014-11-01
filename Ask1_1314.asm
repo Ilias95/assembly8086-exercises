@@ -1,4 +1,4 @@
-title Askisi_1b
+title Ask1_1314_T3T4
 ; Exercise description:
 ; n is a one-digit decimal number stored in memory
 ; compute and display the result of (n+1)^2-n^2+2
