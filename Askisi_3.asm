@@ -60,7 +60,6 @@ main:
 			mov buffer[bx], al
 
 		inc chars_saved
-
 		loop loop_input
 
 	display_text:
@@ -88,8 +87,8 @@ main:
 				sub dl, 32
 
 			print_char:
-					mov ah, 2  ; print char
-					int 21h
+				mov ah, 2  ; print char
+				int 21h
 
 			inc bx
 			cmp bx, chars_saved
