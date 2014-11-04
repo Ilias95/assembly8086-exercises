@@ -106,7 +106,6 @@ data segment
 	chars_saved dw 0
 	buffer db 40 dup(?)
 
-	msg_nl db 13,10,"$"
 	msg_input db "Give me input: $"
 	msg_noinput db 13,10,"You entered nothing. Bye...",13,10,"$"
 	msg_converted db 13,10,"Your text after conversion: $"
