@@ -120,7 +120,7 @@ DATA SEGMENT
 	char db ?
 	times_found dw 0
 	chars_saved dw 0
-	buffer db 40 dup(?)
+	buffer db 80 dup(?)
 
 	msg_input db "Give me a string: $"
 	msg_noinput db 13,10,"You entered nothing. Bye...",13,10,"$"
