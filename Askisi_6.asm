@@ -22,6 +22,7 @@ main proc near
 	add sp, 6 ; restore sp, 3 arguments
 
 	; pass ax, bl registers as parameters to subprogram
+	mov cx, 0  ; clear cx
 	mov ax, sum
 	mov bl, 10 ; display in decimal
 	call print_num
