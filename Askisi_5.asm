@@ -46,7 +46,7 @@ display_hex proc near
 	mov ah, 9
 	int 21h
 
-	; move first four digits of bl to bh
+	; move first four bits of bl to last four bits of bh
 	mov cx, 4
 	loop_shift:
 		rol bl, 1
@@ -64,7 +64,7 @@ display_hex proc near
 	jmp print_first
 
 	is_digit:
-	add dl, 55 ; 'A'-10
+	add dl, 'A'-10
 
 	print_first:
 		mov ah, 2
@@ -72,7 +72,7 @@ display_hex proc near
 
 	second_digit:
 
-	; move rest digits of bl to bh
+	; move rest bits of bl to bh
 	mov bh, 0
 
 	mov cx, 4
@@ -90,7 +90,7 @@ display_hex proc near
 	jmp print_second
 
 	second_is_digit:
-	add dl, 55 ; 'A'-10
+	add dl, 'A'-10
 
 	print_second:
 		mov ah, 2
